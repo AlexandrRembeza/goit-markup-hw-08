@@ -99,7 +99,7 @@
     &__checkbox:checked + &__checkbox-icon {
         background-color: getColor("accent-color");
         border-color: getColor("accent-color");
-        background-image: url(../../images/checkbox.svg);
+        background-image: url(../images/checkbox.svg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
