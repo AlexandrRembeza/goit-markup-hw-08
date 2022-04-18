@@ -1,0 +1,77 @@
+.clients {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+
+    &__title {
+        @extend %section-title;
+        font-size: 28px;
+        line-height: 1.17;
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: 0px;
+
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 50px;
+            font-size: 36px;
+        }
+    }
+
+    &__list {
+        @extend %list;
+        display: flex;
+        flex-wrap: wrap;  // добавил wrap and -15margin
+        justify-content: space-between;
+        margin: -15px;
+    }
+
+    &__item {               //Добавил для телефона
+        flex-basis: calc((100% - 4 * 15px) /2);
+        margin: 15px; 
+
+        @media screen and (min-width: 768px) {
+            flex-basis: calc((100% - 6 * 15px) /3);
+        }
+
+        @media screen and (min-width: 1200px) {
+            flex-basis: calc((100% - 12 * 15px) /6);
+        }
+    }
+
+    &__link {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 92px;
+
+        border: 1px solid #afb1b8;
+        border-radius: 4px;
+        cursor: pointer;
+
+        transition: border-color 250ms $animation-timfun;
+
+        @media screen and (min-width: 1200px) {
+            width: 170px;
+        }
+    }
+
+    &__link:hover,
+    &__link:focus {
+        border-color: getColor("accent-color");
+    }
+
+    &__icon {
+        fill: #afb1b8;
+        transition: fill 250ms $animation-timfun;
+    }
+
+    &__link:hover &__icon,
+    &__link:focus &__icon {
+        fill: getColor("accent-color");
+    }
+}
