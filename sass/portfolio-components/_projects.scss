@@ -101,12 +101,15 @@
     }
 
     &__text-wrap {
-        flex-grow: 1;
         background: #ffffff;
         border-right: 1px solid #eeeeee;
         border-left: 1px solid #eeeeee;
         border-bottom: 1px solid #eeeeee;
         padding: 20px 23px 19px;
+
+        @media screen and (min-width: 768px) {
+            flex-grow: 1;
+        }
     }
 
     // &__text--first-card {
@@ -120,10 +123,13 @@
     // }
 
     &__link {
-        display: flex;
-        flex-direction: column;
         text-decoration: none;
         transition: box-shadow 250ms $animation-timfun;
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     &__link:hover,
