@@ -81,6 +81,7 @@
         width: 100%;
         
         @media screen and (min-width: 768px) {
+            display: flex;
             flex-basis: calc(100% / 2 - #{$project-list-margin});
             margin-left: $project-list-margin;
             margin-top: $project-list-margin;
@@ -100,6 +101,7 @@
     }
 
     &__text-wrap {
+        flex-grow: 1;
         background: #ffffff;
         border-right: 1px solid #eeeeee;
         border-left: 1px solid #eeeeee;
@@ -107,18 +109,19 @@
         padding: 20px 23px 19px;
     }
 
-    &__text--first-card {
-        @media screen and (min-width: 768px) {
-            padding-bottom: 36px;
-        }
+    // &__text--first-card {
+    //     @media screen and (min-width: 768px) {
+    //         padding-bottom: 36px;
+    //     }
 
-        @media screen and (min-width: 1200px) {
-            padding-bottom: 0;
-        }
-    }
+    //     @media screen and (min-width: 1200px) {
+    //         padding-bottom: 0;
+    //     }
+    // }
 
     &__link {
-        display: block;
+        display: flex;
+        flex-direction: column;
         text-decoration: none;
         transition: box-shadow 250ms $animation-timfun;
     }
